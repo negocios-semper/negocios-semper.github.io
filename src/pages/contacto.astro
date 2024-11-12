@@ -1,0 +1,76 @@
+---
+import MainHead from "../layouts/MainHead.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+    <MainHead
+        title="Semper - Líder en Arroz en Lambayeque"
+        description="Semper, con sucursal en Lambayeque, ofrece productos de alta calidad como Espiga Norteña, Espiga Añejo y Doña Flor. Innovación y tecnología en el procesamiento del arroz."
+    />
+</head>
+<body>
+    <Nav />
+    <section class="w-full max-w-7xl mx-auto p-6">
+      <div class="flex flex-col lg:flex-row items-start gap-6">
+          <!-- Información de contacto -->
+          <div class="w-full lg:w-1/3">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">Lambayeque</h2>
+              <p class="text-gray-700 mb-4">
+                En nuestra sucursal de Lambayeque, te esperamos con un equipo de expertos listo para atenderte y ofrecerte la asesoría que necesitas. Con nuestra experiencia en el sector arrocero, garantizamos un servicio enfocado en la satisfacción de nuestros clientes.
+              </p>
+              <p class="text-gray-700 mb-2"><strong>Dirección:</strong> Au. Panamericana Nte. 778, La Victoria 14000</p>
+              <p class="text-gray-700 mb-2"><strong>WhatsApp:</strong> <a href="https://wa.me/51979985749" class="text-blue-500 hover:underline" target="_blank">+51 979 985 749</a></p>
+              <p class="text-gray-700 mb-6"><strong>Correo Electrónico:</strong> ventas@semper.com.pe</p>
+          </div>
+  
+          <!-- Mapa de ubicación -->
+          <div class="w-full h-full lg:w-2/3 lg:h-[270px]">
+              <iframe
+                  class="w-full h-full rounded-lg shadow-md"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.31324356085!2d-79.8885561262921!3d-6.73158466581617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cee778947b08d%3A0x2f5838bb44cd548d!2sMolino%20Semper!5e0!3m2!1ses-419!2spe!4v1728743885691!5m2!1ses-419!2spe"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </div>
+  </section>
+  
+    <section class="w-full max-w-7xl mx-auto p-6">
+        <div class="flex flex-col lg:flex-row items-start gap-6">
+          <!-- Mapa de ubicación -->
+          <div class="w-full h-full lg:w-2/3 order-2 lg:order-1 lg:h-[270px]">
+            <iframe
+              class="w-full lg:h-96 lg:h-full rounded-lg shadow-md"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6111656537378!2d-76.55835093201834!3d-7.0548919535193795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b07b927a1f5f51%3A0xb337d7b85d4c4fa5!2sIndustria%20Molinera%20Semper!5e0!3m2!1ses-419!2spe!4v1728744965244!5m2!1ses-419!2spe"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      
+          <!-- Información de contacto -->
+          <div class="w-full lg:w-1/3 order-1 lg:order-2">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">San Martín</h2>
+            <p class="text-gray-700 mb-4">
+              Nuestra sucursal en San Martín se encuentra estratégicamente ubicada en Tarapoto, brindándote atención personalizada para resolver todas tus consultas sobre nuestros productos. Con el apoyo de nuestros expertos, recibirás la mejor asesoría en calidad y servicios.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <strong>Dirección:</strong> Carr. Fernando Belaunde Terry, El limon 22740
+            </p>
+            <p class="text-gray-700 mb-2">
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/51961638751" class="text-blue-500 hover:underline" target="_blank">+51 961 638 751</a>
+            </p>
+            <p class="text-gray-700 mb-6">
+              <strong>Correo Electrónico:</strong> molino@semper.com.pe
+            </p>
+          </div>
+        </div>
+      </section>
+      
+    <Footer />
+</body>
+</html>
