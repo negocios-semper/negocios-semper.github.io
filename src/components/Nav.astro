@@ -1,0 +1,206 @@
+---
+const url = new URL(Astro.url);
+const pathname = url.pathname;
+---
+
+<style>
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegúrate de que el nav esté por encima de otros elementos */
+  }
+</style>
+
+<nav class="bg-neutral-800">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-20 sm:h-16">
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <!-- Botón de menú para móviles -->
+        <button
+          type="button"
+          class="inline-flex items-center justify-center p-3 rounded-md text-green-400 hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-200 sm:p-2"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menú</span>
+          <!-- Icono del menú (se cambia dependiendo del estado del menú) -->
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex-1 h- flex items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <a href="/" class="flex-shrink-0 flex items-center">
+          <img src="/SemperLogoBlanco.png" class="block h-14 w-auto sm:h-10"
+            alt="Semper Logo"
+          />
+        </a>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <!-- Links del navbar -->
+            <a
+              href="/"
+              class={"px-3 py-2 rounded-md text-sm font-medium " +
+                (pathname === "/"
+                  ? " bg-green-700 text-white"
+                  : " text-green-500 hover:bg-green-700 hover:text-white")}
+              >Inicio</a
+            >
+            <a
+              href="/nosotros"
+              class={"px-3 py-2 rounded-md text-sm font-medium " +
+                (pathname === "/nosotros"
+                  ? " bg-green-700 text-white"
+                  : " text-green-500 hover:bg-green-700 hover:text-white")}
+              >Nosotros</a
+            >
+            <a
+              href="/productos"
+              class={"px-3 py-2 rounded-md text-sm font-medium " +
+                (pathname === "/productos"
+                  ? " bg-green-700 text-white"
+                  : " text-green-500 hover:bg-green-700 hover:text-white")}
+              >Productos</a
+            >
+            <a
+              href="/contacto"
+              class={"px-3 py-2 rounded-md text-sm font-medium " +
+                (pathname === "/contacto"
+                  ? " bg-green-700 text-white"
+                  : " text-green-500 hover:bg-green-700 hover:text-white")}
+              >Contáctanos</a
+            >
+            <!-- Botón de WhatsApp -->
+            <div class="relative">
+              <button
+                type="button"
+                class="px-3 py-2 rounded-md text-sm font-medium text-green-500 hover:bg-green-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-200"
+                id="whatsapp-menu-button"
+              >
+                WhatsApp
+              </button>
+              <div
+                class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                id="whatsapp-menu"
+              >
+                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="whatsapp-menu-button">
+                  <a
+                    href="https://wa.me/51979985749"
+                    target="_blank"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-100"
+                    role="menuitem"
+                  >
+                  WhatsApp Semper Costa
+                  </a>
+                  <a
+                    href="https://wa.me/51961638751"
+                    target="_blank"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-100"
+                    role="menuitem"
+                  >
+                  WhatsApp Semper Selva
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sección de contacto en la parte derecha -->
+      <div class="hidden lg:flex lg:flex-col lg:items-end lg:mr-6 text-sm text-green-500">
+        <span>Teléfonos: +51 51979985749 / +51 51961638751</span>
+        <span>Correo: <a href="mailto:ventas@semper.com.pe" class="hover:text-white">ventas@semper.com.pe</a></span>
+      </div>
+    </div>
+  </div>
+  <!-- Menú móvil, se muestra/oculta con JavaScript -->
+  <div class="sm:hidden hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a
+        href="/"
+        class={"block px-3 py-2 rounded-md text-base font-medium " +
+          (pathname === "/"
+            ? " bg-green-700 text-white"
+            : " text-green-500 hover:bg-green-700 hover:text-white")}
+        >Inicio</a
+      >
+      <a
+        href="/nosotros"
+        class={"block px-3 py-2 rounded-md text-base font-medium " +
+          (pathname === "/nosotros"
+            ? " bg-green-700 text-white"
+            : " text-green-500 hover:bg-green-700 hover:text-white")}
+        >Nosotros</a
+      >
+      <a
+        href="/productos"
+        class={"block px-3 py-2 rounded-md text-base font-medium " +
+          (pathname === "/productos"
+            ? " bg-green-700 text-white"
+            : " text-green-500 hover:bg-green-700 hover:text-white")}
+        >Productos</a
+      >
+      <a
+        href="/contacto"
+        class={"block px-3 py-2 rounded-md text-base font-medium " +
+          (pathname === "/contacto"
+            ? " bg-green-700 text-white"
+            : " text-green-500 hover:bg-green-700 hover:text-white")}
+        >Contáctanos</a
+      >
+      <!-- Botones de WhatsApp en menú móvil -->
+      <div class="space-y-1">
+        <a
+          href="https://wa.me/51979985749"
+          target="_blank"
+          class="block px-3 py-2 rounded-md text-base font-medium text-green-500 hover:bg-green-700 hover:text-white"
+        >
+          WhatsApp Semper Costa
+        </a>
+        <a
+          href="https://wa.me/51961638751"
+          target="_blank"
+          class="block px-3 py-2 rounded-md text-base font-medium text-green-500 hover:bg-green-700 hover:text-white"
+        >
+          WhatsApp Semper Selva
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector('button[aria-controls="mobile-menu"]');
+    if (btn) {
+      btn.addEventListener("click", function () {
+        const expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+        const menu = document.getElementById("mobile-menu");
+        if (menu) {
+          menu.classList.toggle("hidden");
+        }
+      });
+    }
+
+    // Mostrar el menú de WhatsApp al hacer clic
+    const whatsappBtn = document.getElementById("whatsapp-menu-button");
+    const whatsappMenu = document.getElementById("whatsapp-menu");
+    if (whatsappBtn && whatsappMenu) {
+      whatsappBtn.addEventListener("click", function () {
+        whatsappMenu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>

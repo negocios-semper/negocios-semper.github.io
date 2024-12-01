@@ -1,0 +1,156 @@
+---
+import MainHead from "../layouts/MainHead.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <MainHead
+            title="Semper - Líder en Arroz en el Norte del Perú"
+            description="Semper, con sucursales en Lambayeque y San Martín, ofrece productos de alta calidad como Espiga Norteña, Espiga Añejo y Doña Flor. Innovación y tecnología en el procesamiento del arroz."
+        />
+    </head>
+    <body class="bg-gray-50 text-gray-900">
+        <Nav />
+        
+        <!-- Sobre Nosotros (Fondo Blanco) -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-green-800 mb-12 text-center">
+                    Sobre Nosotros
+                </h2>
+                <!-- Nuestra Empresa -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+                    <div class="flex items-center">
+                        <img
+                            src="/img/Bienvenidos.png"
+                            alt="Nuestra Empresa"
+                            class="w-full h-auto rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out"
+                        />
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-3xl font-semibold text-green-800 mb-6">
+                            Nuestra Empresa
+                        </h3>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Molino Semper es una empresa peruana líder en el procesamiento de arroz de alta calidad. Con tecnología de última generación, nos aseguramos de ofrecer un producto que cumple con los más altos estándares para satisfacer al consumidor más exigente. Nuestro compromiso con la calidad y la innovación nos ha consolidado como referentes en el mercado arrocero nacional, brindando una experiencia superior a nuestros clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misión y Visión (Fondo Verde) -->
+        <section class="bg-green-700 py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Misión y Visión -->
+                    <div class="flex flex-col gap-12">
+                        <!-- Misión -->
+                        <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                            <h3 class="text-3xl font-semibold text-green-800 mb-4">
+                                Misión
+                            </h3>
+                            <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                                Proveer a nuestros clientes arroz de la más alta calidad, cultivado y procesado con dedicación, para enriquecer sus experiencias gastronómicas. Nos comprometemos a mantener estándares de excelencia en todas nuestras operaciones, desde el cultivo hasta la entrega, contribuyendo al bienestar de nuestras comunidades y al desarrollo sostenible de la región.
+                            </p>
+                        </div>
+
+                        <!-- Visión -->
+                        <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                            <h3 class="text-3xl font-semibold text-green-800 mb-4">
+                                Visión
+                            </h3>
+                            <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                                Ser la empresa líder en el mercado de arroz en Perú, reconocida por nuestra innovación, compromiso con la sostenibilidad y responsabilidad social. Aspiramos a transformar el sector agrícola, creando valor para nuestros consumidores, colaboradores y accionistas, mientras impulsamos el crecimiento y el progreso de nuestras comunidades.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Imagen al lado derecho de Misión y Visión -->
+                    <div class="flex items-center justify-center">
+                        <img
+                            src="/img/Molino.jpg"
+                            alt="Misión y Visión"
+                            class="w-full h-full rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestros Valores (Fondo Blanco) -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-semibold text-green-800 mb-8 text-center">
+                    Nuestros Valores
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Calidad -->
+                    <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">
+                            Calidad
+                        </h4>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Nos esforzamos por ofrecer productos que cumplan con los más altos estándares de calidad, asegurando la satisfacción de nuestros clientes.
+                        </p>
+                    </div>
+
+                    <!-- Responsabilidad Social -->
+                    <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">
+                            Responsabilidad Social
+                        </h4>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Valoramos nuestras relaciones con la comunidad, trabajando para generar un impacto positivo y contribuir al bienestar social.
+                        </p>
+                    </div>
+
+                    <!-- Integridad -->
+                    <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">
+                            Integridad
+                        </h4>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Actuamos con transparencia, honestidad y ética en todas nuestras operaciones, fortaleciendo la confianza con nuestros clientes y colaboradores.
+                        </p>
+                    </div>
+
+                    <!-- Innovación -->
+                    <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">
+                            Innovación
+                        </h4>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Impulsamos el cambio y la mejora continua a través de la innovación, buscando siempre formas de mejorar nuestros procesos y productos.
+                        </p>
+                    </div>
+
+                    <!-- Sostenibilidad -->
+                    <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">
+                            Sostenibilidad
+                        </h4>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Nos comprometemos a ser responsables con el medio ambiente, promoviendo prácticas sostenibles en toda nuestra cadena de valor.
+                        </p>
+                    </div>
+
+                    <!-- Trabajo en Equipo -->
+                    <div class="bg-green-50 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-500 ease-in-out">
+                        <h4 class="text-2xl font-semibold text-green-800 mb-4">
+                            Trabajo en Equipo
+                        </h4>
+                        <p class="text-lg text-justify text-gray-800 leading-relaxed">
+                            Creemos en el poder del trabajo colaborativo y fomentamos un ambiente de apoyo y cooperación entre todos los miembros de nuestra empresa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+    </body>
+</html>
